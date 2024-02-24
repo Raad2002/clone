@@ -1,4 +1,4 @@
-﻿# $ErrorActionPreference = 'SilentlyContinue'
+# $ErrorActionPreference = 'SilentlyContinue'
 # $wshell = New-Object -ComObject Wscript.Shell
 # $Button = [System.Windows.MessageBoxButton]::YesNoCancel
 # $ErrorIco = [System.Windows.MessageBoxImage]::Error
@@ -641,7 +641,7 @@ $remouveblot.Add_Click({
     })
 
 $blot_reg_key.Add_Click({
-        $ErrorActionPreference = 'SilentlyContinue'
+        # $ErrorActionPreference = 'SilentlyContinue'
         $Keys = @(
             
             New-PSDrive  HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT
@@ -688,7 +688,7 @@ $blot_reg_key.Add_Click({
 
 
 $revert_reg_chang.Add_Click({
-        $ErrorActionPreference = 'SilentlyContinue'
+        # $ErrorActionPreference = 'SilentlyContinue'
         #This function will revert the changes you made when running the Start-Debloat function.
         
         #This line reinstalls all of the bloatware that was removed
@@ -797,7 +797,7 @@ $revert_reg_chang.Add_Click({
     })
 
  $telemetry.Add_Click({
-        $ErrorActionPreference = 'SilentlyContinue'
+        # $ErrorActionPreference = 'SilentlyContinue'
         #Disables Windows Feedback Experience
         Write-Host "Disabling Windows Feedback Experience program"
         $Advertising = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo"
