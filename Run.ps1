@@ -33,56 +33,62 @@ $input = @’
         Title="My App and windows optimiser" Height="650" Width="560" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <TabControl Background="#FF2B00FF">
         <TabItem Header="App instaler">
-            <Grid Background="#FF252525">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="160*"/>
-                    <RowDefinition Height="127*"/>
-                </Grid.RowDefinitions>
-                <Label Content="Mead by raad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red" Height="32" Width="90"/>
-                <Label Content="Chose app when you need to Install/Unistall" HorizontalAlignment="Left" Margin="75,26,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368"/>
-                <CheckBox x:Name="Chrome_CheckBox" Content="Chrome" HorizontalAlignment="Left" Margin="25,78,0,0" VerticalAlignment="Top" Foreground="White" IsChecked="False" FontSize="14" RenderTransformOrigin="1.041,0.566" Height="18" Width="132"/>
-                <CheckBox x:Name="Fierfox_CheckBox" Content="Fierfox" HorizontalAlignment="Left" Margin="25,101,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="Breave_CheckBox" Content="Breave" HorizontalAlignment="Left" Margin="25,124,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="Discord_CheckBox" Content="Discord" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="ONLYOFFICE_CheckBox" Content="ONLYOFFICE" HorizontalAlignment="Left" Margin="25,170,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="0.757,0.431" Height="18" Width="132"/>
-                <CheckBox x:Name="Everything_CheckBox" Content="Everything" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="powershell_CheckBox" Content="Powershell" HorizontalAlignment="Left" Margin="25,216,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="Visual_Studio_Community22_CheckBox" Content="Visual Studio Com22" HorizontalAlignment="Left" Margin="25,262,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="132" RenderTransformOrigin="0.573,0.978"/>
-                <CheckBox x:Name="Visual_Studio_Code_CheckBox" Content="Visual Studio Code" HorizontalAlignment="Left" Margin="25,239,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="132"/>
-                <CheckBox x:Name="Steam_CheckBox" Content="Steam" HorizontalAlignment="Left" Margin="25,285,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132"/>
-                <CheckBox x:Name="DS4Windows_CheckBox" Content="DS4Windows" HorizontalAlignment="Left" Margin="162,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="NET_4_8_CheckBox" Content=".NET 4.8" HorizontalAlignment="Left" Margin="295,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="libreoffice_CheckBox" Content="libreoffice" HorizontalAlignment="Left" Margin="407,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="1.171,-0.547" Height="18" Width="127"/>
-                <CheckBox x:Name="NanaZip_CheckBox" Content="NanaZip" HorizontalAlignment="Left" Margin="162,103,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="WinRAR_CheckBox" Content="WinRAR" HorizontalAlignment="Left" Margin="162,126,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="NET_5_0_CheckBox" Content=".NET 5.0" HorizontalAlignment="Left" Margin="295,103,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Revo_Uninstaller_CheckBox" Content="Revo Uninstaller" HorizontalAlignment="Left" Margin="407,103,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="127"/>
-                <CheckBox x:Name="NET_6_0_CheckBox" Content=".NET 6.0" HorizontalAlignment="Left" Margin="295,126,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Geek_Uninstaller_CheckBox" Content="Geek Uninstaller" HorizontalAlignment="Left" Margin="407,126,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="1.395,1.672" Height="18" Width="127"/>
-                <CheckBox x:Name="Epic_Games_Launcher_CheckBox" Content="Epic Games " HorizontalAlignment="Left" Margin="162,149,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="PDF_XChange_Viewer_CheckBox" Content="PDFXChange Viewer" HorizontalAlignment="Left" Margin="162,172,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="130"/>
-                <CheckBox x:Name="PDF24_CreatorCheckBox" Content="PDF24 Creator" HorizontalAlignment="Left" Margin="162,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="PDF_XChange_Editor_CheckBox" Content="PDF-XChange Editor" HorizontalAlignment="Left" Margin="162,218,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="128"/>
-                <CheckBox x:Name="VLC_media_player_CheckBox" Content="VLC media player" HorizontalAlignment="Left" Margin="162,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <CheckBox x:Name="Sublime_Text_2_CheckBox" Content="Sublime Text 2" HorizontalAlignment="Left" Margin="162,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="0.158,1.726" Height="18" Width="128"/>
-                <CheckBox x:Name="NET_7_0_CheckBox" Content=".NET 7.0" HorizontalAlignment="Left" Margin="295,149,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="NET_8_0_CheckBox" Content=".NET 8.0" HorizontalAlignment="Left" Margin="295,172,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="VisualC22_CheckBox" Content="Visual C++22" HorizontalAlignment="Left" Margin="295,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Visual_C_15_CheckBox" Content="Visual C++15" HorizontalAlignment="Left" Margin="295,218,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Python_3_6_CheckBox" Content="Python 3.6" HorizontalAlignment="Left" Margin="295,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="FileZilla_CheckBox" Content="FileZilla" HorizontalAlignment="Left" Margin="295,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Google_Drive_CheckBox" Content="Google Drive" HorizontalAlignment="Left" Margin="295,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107"/>
-                <CheckBox x:Name="Adobe_Acrobat_Reader_CheckBox" Content="Adobe Reader" HorizontalAlignment="Left" Margin="407,149,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="127"/>
-                <CheckBox x:Name="rockstar_CheckBox" Content="rockstar luncher" HorizontalAlignment="Left" Margin="407,172,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127"/>
-                <CheckBox x:Name="AutoHotkey_CheckBox" Content="AutoHotkey" HorizontalAlignment="Left" Margin="407,195,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="137" FontSize="14"/>
-                <CheckBox x:Name="AnyDesk_CheckBox" Content="AnyDesk" HorizontalAlignment="Left" Margin="407,218,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127" RenderTransformOrigin="0.504,1.044"/>
-                <CheckBox x:Name="OBS_Studio_CheckBox" Content="OBS Studio" Margin="407,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18"/>
-                <CheckBox x:Name="VirtualBox_CheckBox" Content="VirtualBox" HorizontalAlignment="Left" Margin="407,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="12" Height="18" Width="137"/>
-                <CheckBox x:Name="Rufus_CheckBox" Content="Rufus" HorizontalAlignment="Left" Margin="407,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127"/>
-                <CheckBox x:Name="Paint_NET_CheckBox" Content="Paint.NET" HorizontalAlignment="Left" Margin="162,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128"/>
-                <TextBox x:Name="TextBox1" HorizontalAlignment="Center" Height="121" Margin="0,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Grid.Row="1"/>
-                <Button x:Name="Uninstall_Btn" Content="Uninstall" HorizontalAlignment="Left" Margin="260,186,0,0" VerticalAlignment="Top" Height="40" Width="172" Foreground="White" Background="#FFEA3E3E" FontFamily="Segoe UI Black" FontSize="20" FontWeight="Bold" Grid.Row="1"/>
-                <Button x:Name="Install_Btn" Content="Install" HorizontalAlignment="Left" Margin="62,186,0,0" VerticalAlignment="Top" Height="40" Width="172"  FontSize="22" FontFamily="Segoe UI Black" Background="#FF3B2BFF" Foreground="#FFFFEA00" Grid.Row="1"/>
+            <Grid Height="606">
+                <Grid Background="#FF252525">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="24*"/>
+                        <ColumnDefinition Width="253*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160*"/>
+                        <RowDefinition Height="127*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Mead by raad" HorizontalAlignment="Left" Margin="184,10,0,0" VerticalAlignment="Top" Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red" Height="32" Width="90" Grid.Column="1"/>
+                    <Label Content="Chose app when you need to Install/Unistall" HorizontalAlignment="Left" Margin="27,26,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368" Grid.Column="1"/>
+                    <CheckBox x:Name="Chrome_CheckBox" Content="Chrome" HorizontalAlignment="Left" Margin="25,78,0,0" VerticalAlignment="Top" Foreground="White" IsChecked="False" FontSize="14" RenderTransformOrigin="1.041,0.566" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Fierfox_CheckBox" Content="Fierfox" HorizontalAlignment="Left" Margin="25,101,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Breave_CheckBox" Content="Breave" HorizontalAlignment="Left" Margin="25,124,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Discord_CheckBox" Content="Discord" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="ONLYOFFICE_CheckBox" Content="ONLYOFFICE" HorizontalAlignment="Left" Margin="25,170,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="0.757,0.431" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Everything_CheckBox" Content="Everything" HorizontalAlignment="Left" Margin="25,193,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="powershell_CheckBox" Content="Powershell" HorizontalAlignment="Left" Margin="25,216,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Visual_Studio_Community22_CheckBox" Content="Visual Studio Com22" HorizontalAlignment="Left" Margin="25,262,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="132" RenderTransformOrigin="0.573,0.978" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Visual_Studio_Code_CheckBox" Content="Visual Studio Code" HorizontalAlignment="Left" Margin="25,239,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="Steam_CheckBox" Content="Steam" HorizontalAlignment="Left" Margin="25,285,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="132" Grid.ColumnSpan="2"/>
+                    <CheckBox x:Name="DS4Windows_CheckBox" Content="DS4Windows" HorizontalAlignment="Left" Margin="114,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="NET_4_8_CheckBox" Content=".NET 4.8" HorizontalAlignment="Left" Margin="247,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="libreoffice_CheckBox" Content="libreoffice" HorizontalAlignment="Left" Margin="359,80,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="1.171,-0.547" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="NanaZip_CheckBox" Content="NanaZip" HorizontalAlignment="Left" Margin="114,103,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="WinRAR_CheckBox" Content="WinRAR" HorizontalAlignment="Left" Margin="114,126,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="NET_5_0_CheckBox" Content=".NET 5.0" HorizontalAlignment="Left" Margin="247,103,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Revo_Uninstaller_CheckBox" Content="Revo Uninstaller" HorizontalAlignment="Left" Margin="359,103,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="NET_6_0_CheckBox" Content=".NET 6.0" HorizontalAlignment="Left" Margin="247,126,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Geek_Uninstaller_CheckBox" Content="Geek Uninstaller" HorizontalAlignment="Left" Margin="359,126,0,0" VerticalAlignment="Top" Foreground="White" RenderTransformOrigin="1.395,1.672" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="Epic_Games_Launcher_CheckBox" Content="Epic Games " HorizontalAlignment="Left" Margin="114,149,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="PDF_XChange_Viewer_CheckBox" Content="PDFXChange Viewer" HorizontalAlignment="Left" Margin="114,172,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="130" Grid.Column="1"/>
+                    <CheckBox x:Name="PDF24_CreatorCheckBox" Content="PDF24 Creator" HorizontalAlignment="Left" Margin="114,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="PDF_XChange_Editor_CheckBox" Content="PDF-XChange Editor" HorizontalAlignment="Left" Margin="114,218,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="VLC_media_player_CheckBox" Content="VLC media player" HorizontalAlignment="Left" Margin="114,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="Sublime_Text_2_CheckBox" Content="Sublime Text 2" HorizontalAlignment="Left" Margin="114,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" RenderTransformOrigin="0.158,1.726" Height="18" Width="128" Grid.Column="1"/>
+                    <CheckBox x:Name="NET_7_0_CheckBox" Content=".NET 7.0" HorizontalAlignment="Left" Margin="247,149,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="NET_8_0_CheckBox" Content=".NET 8.0" HorizontalAlignment="Left" Margin="247,172,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="VisualC22_CheckBox" Content="Visual C++22" HorizontalAlignment="Left" Margin="247,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Visual_C_15_CheckBox" Content="Visual C++15" HorizontalAlignment="Left" Margin="247,218,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Python_3_6_CheckBox" Content="Python 3.6" HorizontalAlignment="Left" Margin="247,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="FileZilla_CheckBox" Content="FileZilla" HorizontalAlignment="Left" Margin="247,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Google_Drive_CheckBox" Content="Google Drive" HorizontalAlignment="Left" Margin="247,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="107" Grid.Column="1"/>
+                    <CheckBox x:Name="Adobe_Acrobat_Reader_CheckBox" Content="Adobe Reader" HorizontalAlignment="Left" Margin="359,149,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="rockstar_CheckBox" Content="rockstar luncher" HorizontalAlignment="Left" Margin="359,172,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="AutoHotkey_CheckBox" Content="AutoHotkey" HorizontalAlignment="Left" Margin="359,195,0,0" VerticalAlignment="Top" Foreground="White" Height="18" Width="137" FontSize="14" Grid.Column="1"/>
+                    <CheckBox x:Name="AnyDesk_CheckBox" Content="AnyDesk" HorizontalAlignment="Left" Margin="359,218,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127" RenderTransformOrigin="0.504,1.044" Grid.Column="1"/>
+                    <CheckBox x:Name="OBS_Studio_CheckBox" Content="OBS Studio" Margin="359,241,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Grid.Column="1"/>
+                    <CheckBox x:Name="VirtualBox_CheckBox" Content="VirtualBox" HorizontalAlignment="Left" Margin="359,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="12" Height="18" Width="137" Grid.Column="1"/>
+                    <CheckBox x:Name="Rufus_CheckBox" Content="Rufus" HorizontalAlignment="Left" Margin="359,287,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="127" Grid.Column="1"/>
+                    <CheckBox x:Name="Paint_NET_CheckBox" Content="Paint.NET" HorizontalAlignment="Left" Margin="114,264,0,0" VerticalAlignment="Top" Foreground="White" FontSize="14" Height="18" Width="128" Grid.Column="1"/>
+                    <TextBox x:Name="TextBox1" HorizontalAlignment="Left" Height="121" Margin="44,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="370" Grid.Row="1" Grid.Column="1"/>
+                    <Button x:Name="Uninstall_Btn" Content="Uninstall" HorizontalAlignment="Left" Margin="242,186,0,0" VerticalAlignment="Top" Height="40" Width="172" Foreground="White" Background="#FFEA3E3E" FontFamily="Segoe UI Black" FontSize="20" FontWeight="Bold" Grid.Row="1" Grid.Column="1"/>
+                    <Button x:Name="Install_Btn" Content="Install" HorizontalAlignment="Left" Margin="45,187,0,0" VerticalAlignment="Top" Height="40" Width="172"  FontSize="22" FontFamily="Segoe UI Black" Background="#FF3B2BFF" Foreground="#FFFFEA00" Grid.Row="1" Grid.Column="1" />
+                </Grid>
             </Grid>
         </TabItem>
         <TabItem Header="window optimisation">
@@ -93,19 +99,23 @@ $input = @’
                 </LinearGradientBrush>
             </TabItem.Background>
             <Grid Background="#FF252525">
-                <Label Content="Mead by raad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red" Height="32" Width="90"/>
-                <Label Content="Chose service when you need to Stop or Unistall" HorizontalAlignment="Left" Margin="75,26,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368"/>
-                <Label Content="Dark Theme" HorizontalAlignment="Left" Margin="208,346,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="114" RenderTransformOrigin="0.868,0.528"/>
-                <Button x:Name="remouveblot" Content="Remove all bloatware" HorizontalAlignment="Left" Margin="20,102,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="blot_reg_key" Content="Remorve bloatware regkey" HorizontalAlignment="Left" Height="32" Margin="272,102,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="revert_reg_chang" Content="Revert registry changes" HorizontalAlignment="Left" Margin="20,174,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="telemetry" Content="Disable Telemetry / Tasks" HorizontalAlignment="Left" Height="32" Margin="272,174,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="dark_enable" Content="Enable" HorizontalAlignment="Left" Margin="20,389,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="dark_disable" Content="Disable" HorizontalAlignment="Left" Height="32" Margin="272,389,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="onedreive" Content="Remorve One Drive" HorizontalAlignment="Left" Height="32" Margin="272,243,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <Button x:Name="disable_services" Content="Disable services" HorizontalAlignment="Left" Margin="20,243,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
-                <TextBox x:Name="TextBox2" HorizontalAlignment="Center" Height="113" Margin="0,436,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="358" Background="#FFB7B7B7"/>
-                <Button x:Name="spotify_Install" Content="Install Spotify" HorizontalAlignment="Left" Height="32" Margin="144,309,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="116*"/>
+                    <ColumnDefinition Width="161*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Mead by raad" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red" Height="32" Width="90" Grid.Column="1"/>
+                <Label Content="Chose service when you need to Stop or Unistall" HorizontalAlignment="Left" Margin="75,26,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368" Grid.ColumnSpan="2"/>
+                <Label Content="Dark Theme" HorizontalAlignment="Left" Margin="208,346,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="114" RenderTransformOrigin="0.868,0.528" Grid.ColumnSpan="2"/>
+                <Button x:Name="remouveblot" Content="Remove all bloatware" HorizontalAlignment="Left" Margin="20,102,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.ColumnSpan="2"/>
+                <Button x:Name="blot_reg_key" Content="Remorve bloatware regkey" HorizontalAlignment="Left" Height="32" Margin="40,102,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.Column="1"/>
+                <Button x:Name="revert_reg_chang" Content="Revert registry changes" HorizontalAlignment="Left" Margin="20,174,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.ColumnSpan="2"/>
+                <Button x:Name="telemetry" Content="Disable Telemetry / Tasks" HorizontalAlignment="Left" Height="32" Margin="40,174,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.Column="1"/>
+                <Button x:Name="dark_enable" Content="Enable" HorizontalAlignment="Left" Margin="20,389,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.ColumnSpan="2"/>
+                <Button x:Name="dark_disable" Content="Disable" HorizontalAlignment="Left" Height="32" Margin="40,389,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.Column="1"/>
+                <Button x:Name="onedreive" Content="Remorve One Drive" HorizontalAlignment="Left" Height="32" Margin="40,243,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.Column="1"/>
+                <Button x:Name="disable_services" Content="Disable services" HorizontalAlignment="Left" Margin="20,243,0,0" VerticalAlignment="Top" Height="32" Width="230" FontSize="14" FontFamily="Arial Black" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Height="113" Margin="98,436,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="358" Background="#FFB7B7B7" Grid.ColumnSpan="2"/>
+                <Button x:Name="spotify_Install" Content="Install Spotify" HorizontalAlignment="Left" Height="32" Margin="144,309,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E" Grid.ColumnSpan="2"/>
             </Grid>
         </TabItem>
 
@@ -118,94 +128,93 @@ $input = @’
 
 
 
-<TabItem Header="Office">
-    <Grid Background="#FF252525">
-        <!-- Titre -->
-        <Label Content="Mead by Raad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"
+        <TabItem Header="Office" Height="20" VerticalAlignment="Bottom">
+            <Grid Background="#FF252525">
+                <!-- Titre -->
+                <Label Content="Mead by Raad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"
                Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red"/>
 
-        <!-- Sous-titre -->
-        <Label Content="Chose app when you need to Install" HorizontalAlignment="Center" Margin="30,40,0,0"
+                <!-- Sous-titre -->
+                <Label Content="Chose app when you need to Install" HorizontalAlignment="Left" Margin="143,32,0,0"
                VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977"/>
 
-        <!-- Sélecteur de langue -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,70,0,490">
-            <Label Content="Langue :" Foreground="White" FontSize="14" Margin="0,0,10,0"/>
-            <ComboBox Name="LanguageSelector"
-                      Width="260"
+                <!-- Sélecteur de langue -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,70,0,490">
+                    <Label Content="Langue :" Foreground="White" Width="109" RenderTransformOrigin="0.489,0.392" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontSize="16" Padding="26,2,5,5" Height="38"/>
+                    <ComboBox x:Name="LanguageSelector"
+                      Width="215"
                       Height="25"
                       FontSize="14"
-                      Padding="4"
+                      Padding="11,0,4,4"
                       Background="White"
                       Foreground="Black"
                       HorizontalContentAlignment="Left"
-                      VerticalContentAlignment="Center"
-                      MaxDropDownHeight="100">
-                <ComboBoxItem Tag="fr-fr" Content="Français (France)" IsSelected="True"/>
-                <ComboBoxItem Tag="en-us" Content="English (United States)"/>
-                <ComboBoxItem Tag="es-es" Content="Espagnol (Espagne)"/>
-                <ComboBoxItem Tag="de-de" Content="Allemand (Allemagne)"/>
-                <ComboBoxItem Tag="it-it" Content="Italien (Italie)"/>
-                <ComboBoxItem Tag="pt-br" Content="Portugais (Brésil)"/>
-                <ComboBoxItem Tag="zh-cn" Content="Chinois simplifié"/>
-                <ComboBoxItem Tag="ja-jp" Content="Japonais"/>
-                <ComboBoxItem Tag="ru-ru" Content="Russe"/>
-                <ComboBoxItem Tag="ar-sa" Content="Arabe (Arabie Saoudite)"/>
-                <ComboBoxItem Tag="nl-nl" Content="Néerlandais"/>
-                <ComboBoxItem Tag="pl-pl" Content="Polonais"/>
-                <ComboBoxItem Tag="tr-tr" Content="Turc"/>
-                <ComboBoxItem Tag="sv-se" Content="Suédois"/>
-                <ComboBoxItem Tag="ko-kr" Content="Coréen"/>
-                <ComboBoxItem Tag="cs-cz" Content="Tchèque"/>
-                <ComboBoxItem Tag="ro-ro" Content="Roumain"/>
-                <ComboBoxItem Tag="hu-hu" Content="Hongrois"/>
-                <ComboBoxItem Tag="el-gr" Content="Grec"/>
-                <ComboBoxItem Tag="he-il" Content="Hébreu"/>
-            </ComboBox>
-        </StackPanel>
+                      MaxDropDownHeight="100" VerticalContentAlignment="Center">
+                        <ComboBoxItem Tag="fr-fr" Content="Français (France)" IsSelected="True"/>
+                        <ComboBoxItem Tag="en-us" Content="English (United States)"/>
+                        <ComboBoxItem Tag="es-es" Content="Espagnol (Espagne)"/>
+                        <ComboBoxItem Tag="de-de" Content="Allemand (Allemagne)"/>
+                        <ComboBoxItem Tag="it-it" Content="Italien (Italie)"/>
+                        <ComboBoxItem Tag="pt-br" Content="Portugais (Brésil)"/>
+                        <ComboBoxItem Tag="zh-cn" Content="Chinois simplifié"/>
+                        <ComboBoxItem Tag="ja-jp" Content="Japonais"/>
+                        <ComboBoxItem Tag="ru-ru" Content="Russe"/>
+                        <ComboBoxItem Tag="ar-sa" Content="Arabe (Arabie Saoudite)"/>
+                        <ComboBoxItem Tag="nl-nl" Content="Néerlandais"/>
+                        <ComboBoxItem Tag="pl-pl" Content="Polonais"/>
+                        <ComboBoxItem Tag="tr-tr" Content="Turc"/>
+                        <ComboBoxItem Tag="sv-se" Content="Suédois"/>
+                        <ComboBoxItem Tag="ko-kr" Content="Coréen"/>
+                        <ComboBoxItem Tag="cs-cz" Content="Tchèque"/>
+                        <ComboBoxItem Tag="ro-ro" Content="Roumain"/>
+                        <ComboBoxItem Tag="hu-hu" Content="Hongrois"/>
+                        <ComboBoxItem Tag="el-gr" Content="Grec"/>
+                        <ComboBoxItem Tag="he-il" Content="Hébreu"/>
+                    </ComboBox>
+                </StackPanel>
 
-        <!-- Cases à cocher centrées -->
-        <StackPanel HorizontalAlignment="Center" Margin="0,110,0,0">
-            <UniformGrid Columns="3" Margin="10">
-                <CheckBox Name="AccessCheck" Content="Access" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="ExcelCheck" Content="Excel" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="GrooveCheck" Content="OneDrive (Groove)" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="SkypeCheck" Content="Skype for Business" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="OneDriveCheck" Content="OneDrive Desktop" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="OneNoteCheck" Content="OneNote" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="OutlookClassicCheck" Content="Outlook (classic)" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="OutlookNewCheck" Content="Outlook (new)" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="PowerPointCheck" Content="PowerPoint" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="PublisherCheck" Content="Publisher" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="TeamsCheck" Content="Teams" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="WordCheck" Content="Word" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="VisioCheck" Content="Installer Visio Pro" FontSize="14" Foreground="White" Margin="10"/>
-                <CheckBox Name="ProjectCheck" Content="Installer Project Pro" FontSize="14" Foreground="White" Margin="10"/>
-            </UniformGrid>
+                <!-- Cases à cocher centrées -->
+                <StackPanel HorizontalAlignment="Center" Margin="0,110,0,0">
+                    <UniformGrid Columns="3" Margin="10">
+                        <CheckBox Name="AccessCheck" Content="Access" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="ExcelCheck" Content="Excel" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="GrooveCheck" Content="OneDrive (Groove)" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="SkypeCheck" Content="Skype for Business" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="OneDriveCheck" Content="OneDrive Desktop" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="OneNoteCheck" Content="OneNote" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="OutlookClassicCheck" Content="Outlook (classic)" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="OutlookNewCheck" Content="Outlook (new)" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="PowerPointCheck" Content="PowerPoint" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="PublisherCheck" Content="Publisher" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="TeamsCheck" Content="Teams" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="WordCheck" Content="Word" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="VisioCheck" Content="Installer Visio Pro" FontSize="14" Foreground="White" Margin="10"/>
+                        <CheckBox Name="ProjectCheck" Content="Installer Project Pro" FontSize="14" Foreground="White" Margin="10"/>
+                    </UniformGrid>
 
-            <!-- Bloc des 3 boutons -->
-            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <!-- Ligne des deux boutons -->
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                    <Button x:Name="InstallOfficeButton" Content="Installer Office"
+                    <!-- Bloc des 3 boutons -->
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
+                        <!-- Ligne des deux boutons -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Button x:Name="InstallOfficeButton" Content="Installer Office"
                             Height="40" Width="230" FontSize="14" FontFamily="Arial Black"
                             Background="#FF3B2BFF" BorderBrush="White" BorderThickness="3" Foreground="White" Margin="10,0"/>
-                </StackPanel>
-                <Label Content="Chose app when you need to Unistall" HorizontalAlignment="Left" Margin="100,5,0,10" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368"/>
-                <!-- Nouveau bouton centré -->
-                <Button x:Name="UninstallOfficeButton" Content="Désinstaller Office"
+                        </StackPanel>
+                        <Label Content="Chose app when you need to Unistall" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="39" Width="368" VerticalContentAlignment="Center" FlowDirection="RightToLeft" Padding="30,0,5,12" Margin="0,10,0,0"/>
+                        <!-- Nouveau bouton centré -->
+                        <Button x:Name="UninstallOfficeButton" Content="Désinstaller Office"
                         Height="40" Width="230" FontSize="14" FontFamily="Arial Black"
                         Background="#FFEA3E3E" BorderBrush="White" BorderThickness="3"
                         Foreground="White" Margin="0,0,0,0"/>
-            </StackPanel>
-        </StackPanel>
-    </Grid>
-</TabItem>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </TabItem>
 
 
 
 
-        
+
     </TabControl>
 </Window>
 '@
