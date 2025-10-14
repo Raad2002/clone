@@ -108,6 +108,104 @@ $input = @’
                 <Button x:Name="spotify_Install" Content="Install Spotify" HorizontalAlignment="Left" Height="32" Margin="144,309,0,0" VerticalAlignment="Top" Width="230" FontFamily="Arial Black" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" BorderBrush="White" BorderThickness="3,3,3,3" Foreground="#FFE0D23E"/>
             </Grid>
         </TabItem>
+
+
+
+
+
+
+
+
+
+
+<TabItem Header="Office">
+    <Grid Background="#FF252525">
+        <!-- Titre -->
+        <Label Content="Mead by Raad" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"
+               Background="Transparent" FontFamily="Bahnschrift Condensed" FontSize="18" Foreground="Red"/>
+
+        <!-- Sous-titre -->
+        <Label Content="Chose app when you need to Install" HorizontalAlignment="Center" Margin="30,40,0,0"
+               VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977"/>
+
+        <!-- Sélecteur de langue -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,70,0,490">
+            <Label Content="Langue :" Foreground="White" FontSize="14" Margin="0,0,10,0"/>
+            <ComboBox Name="LanguageSelector"
+                      Width="260"
+                      Height="25"
+                      FontSize="14"
+                      Padding="4"
+                      Background="White"
+                      Foreground="Black"
+                      HorizontalContentAlignment="Left"
+                      VerticalContentAlignment="Center"
+                      MaxDropDownHeight="100">
+                <ComboBoxItem Tag="fr-fr" Content="Français (France)" IsSelected="True"/>
+                <ComboBoxItem Tag="en-us" Content="English (United States)"/>
+                <ComboBoxItem Tag="es-es" Content="Espagnol (Espagne)"/>
+                <ComboBoxItem Tag="de-de" Content="Allemand (Allemagne)"/>
+                <ComboBoxItem Tag="it-it" Content="Italien (Italie)"/>
+                <ComboBoxItem Tag="pt-br" Content="Portugais (Brésil)"/>
+                <ComboBoxItem Tag="zh-cn" Content="Chinois simplifié"/>
+                <ComboBoxItem Tag="ja-jp" Content="Japonais"/>
+                <ComboBoxItem Tag="ru-ru" Content="Russe"/>
+                <ComboBoxItem Tag="ar-sa" Content="Arabe (Arabie Saoudite)"/>
+                <ComboBoxItem Tag="nl-nl" Content="Néerlandais"/>
+                <ComboBoxItem Tag="pl-pl" Content="Polonais"/>
+                <ComboBoxItem Tag="tr-tr" Content="Turc"/>
+                <ComboBoxItem Tag="sv-se" Content="Suédois"/>
+                <ComboBoxItem Tag="ko-kr" Content="Coréen"/>
+                <ComboBoxItem Tag="cs-cz" Content="Tchèque"/>
+                <ComboBoxItem Tag="ro-ro" Content="Roumain"/>
+                <ComboBoxItem Tag="hu-hu" Content="Hongrois"/>
+                <ComboBoxItem Tag="el-gr" Content="Grec"/>
+                <ComboBoxItem Tag="he-il" Content="Hébreu"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Cases à cocher centrées -->
+        <StackPanel HorizontalAlignment="Center" Margin="0,110,0,0">
+            <UniformGrid Columns="3" Margin="10">
+                <CheckBox Name="AccessCheck" Content="Access" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="ExcelCheck" Content="Excel" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="GrooveCheck" Content="OneDrive (Groove)" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="SkypeCheck" Content="Skype for Business" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="OneDriveCheck" Content="OneDrive Desktop" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="OneNoteCheck" Content="OneNote" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="OutlookClassicCheck" Content="Outlook (classic)" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="OutlookNewCheck" Content="Outlook (new)" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="PowerPointCheck" Content="PowerPoint" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="PublisherCheck" Content="Publisher" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="TeamsCheck" Content="Teams" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="WordCheck" Content="Word" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="VisioCheck" Content="Installer Visio Pro" FontSize="14" Foreground="White" Margin="10"/>
+                <CheckBox Name="ProjectCheck" Content="Installer Project Pro" FontSize="14" Foreground="White" Margin="10"/>
+            </UniformGrid>
+
+            <!-- Bloc des 3 boutons -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <!-- Ligne des deux boutons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                    <Button x:Name="InstallOfficeButton" Content="Installer Office"
+                            Height="40" Width="230" FontSize="14" FontFamily="Arial Black"
+                            Background="#FF3B2BFF" BorderBrush="White" BorderThickness="3" Foreground="White" Margin="10,0"/>
+                </StackPanel>
+                <Label Content="Chose app when you need to Unistall" HorizontalAlignment="Left" Margin="100,5,0,10" VerticalAlignment="Top" FontSize="16" FontFamily="Segoe Print" Background="Transparent" Foreground="#FFE8D977" Height="38" Width="368"/>
+                <!-- Nouveau bouton centré -->
+                <Button x:Name="UninstallOfficeButton" Content="Désinstaller Office"
+                        Height="40" Width="230" FontSize="14" FontFamily="Arial Black"
+                        Background="#FFEA3E3E" BorderBrush="White" BorderThickness="3"
+                        Foreground="White" Margin="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</TabItem>
+
+
+
+
+        
     </TabControl>
 </Window>
 '@
@@ -1170,6 +1268,252 @@ If (Test-Path "$env:USERPROFILE\OneDrive\*") {
         iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -confirm_uninstall_ms_spoti -confirm_spoti_recomended_over -podcasts_off -block_update_on  -new_theme -adsections_off -lyrics_stat spotify"
     
     })
+
+
+
+
+# Récupération des éléments de l'interface
+$LanguageSelector = $Window.FindName("LanguageSelector")
+$GenerateConfigButton = $Window.FindName("GenerateConfigButton")
+$InstallOfficeButton = $Window.FindName("InstallOfficeButton")
+
+$AccessCheck = $Window.FindName("AccessCheck")
+$ExcelCheck = $Window.FindName("ExcelCheck")
+$GrooveCheck = $Window.FindName("GrooveCheck")
+$SkypeCheck = $Window.FindName("SkypeCheck")
+$OneDriveCheck = $Window.FindName("OneDriveCheck")
+$OneNoteCheck = $Window.FindName("OneNoteCheck")
+$OutlookClassicCheck = $Window.FindName("OutlookClassicCheck")
+$OutlookNewCheck = $Window.FindName("OutlookNewCheck")
+$PowerPointCheck = $Window.FindName("PowerPointCheck")
+$PublisherCheck = $Window.FindName("PublisherCheck")
+$TeamsCheck = $Window.FindName("TeamsCheck")
+$WordCheck = $Window.FindName("WordCheck")
+$VisioCheck = $Window.FindName("VisioCheck")
+$ProjectCheck = $Window.FindName("ProjectCheck")
+
+# Fonction pour récupérer la langue sélectionnée
+function Get-SelectedLanguage {
+    return $LanguageSelector.SelectedItem.Tag
+}
+
+# Génération du fichier Configuration.xml
+# Récupération des éléments de l'interface
+$LanguageSelector = $Window.FindName("LanguageSelector")
+$InstallOfficeButton = $Window.FindName("InstallOfficeButton")
+
+
+
+
+
+
+
+$InstallOfficeButton = $Window.FindName("InstallOfficeButton")
+$InstallOfficeButton.Add_Click({
+    $setupPath = "$env:TEMP\\setup.exe"
+    $tempXml = "$env:TEMP\\Configuration.xml"
+    $language = Get-SelectedLanguage
+
+    # Dictionnaire des apps avec leurs vrais IDs
+    $allApps = @{
+        Access = "Access"
+        Excel = "Excel"
+        Groove = "Groove"
+        Skype = "Lync"
+        OneDrive = "OneDrive"
+        OneNote = "OneNote"
+        OutlookClassic = "Outlook"
+        OutlookNew = "OutlookNew"
+        PowerPoint = "PowerPoint"
+        Publisher = "Publisher"
+        Teams = "Teams"
+        Word = "Word"
+    }
+
+    # Récupère les apps cochées
+    $includedApps = @()
+    if ($AccessCheck.IsChecked) { $includedApps += $allApps.Access }
+    if ($ExcelCheck.IsChecked) { $includedApps += $allApps.Excel }
+    if ($GrooveCheck.IsChecked) { $includedApps += $allApps.Groove }
+    if ($SkypeCheck.IsChecked) { $includedApps += $allApps.Skype }
+    if ($OneDriveCheck.IsChecked) { $includedApps += $allApps.OneDrive }
+    if ($OneNoteCheck.IsChecked) { $includedApps += $allApps.OneNote }
+    if ($OutlookClassicCheck.IsChecked) { $includedApps += $allApps.OutlookClassic }
+    if ($OutlookNewCheck.IsChecked) { $includedApps += $allApps.OutlookNew }
+    if ($PowerPointCheck.IsChecked) { $includedApps += $allApps.PowerPoint }
+    if ($PublisherCheck.IsChecked) { $includedApps += $allApps.Publisher }
+    if ($TeamsCheck.IsChecked) { $includedApps += $allApps.Teams }
+    if ($WordCheck.IsChecked) { $includedApps += $allApps.Word }
+
+    # ✅ Vérifie qu’au moins une case est cochée (apps ou Visio/Project)
+    if ($includedApps.Count -eq 0 -and !$VisioCheck.IsChecked -and !$ProjectCheck.IsChecked) {
+        [System.Windows.Forms.MessageBox]::Show("Veuillez sélectionner au moins une application à installer.")
+        return
+    }
+
+    # Calcul des apps à exclure
+    $excludedApps = $allApps.Values | Where-Object { $includedApps -notcontains $_ }
+    $excludeXml = $excludedApps | ForEach-Object { "      <ExcludeApp ID=`"$_`"/>" }
+
+    # Visio et Project
+    $visioXml = ""
+    $projectXml = ""
+    if ($VisioCheck.IsChecked) {
+        $visioXml = @"
+    <Product ID="VisioPro2024Volume" PIDKEY="B7TN8-FJ8V3-7QYCP-HQPMV-YY89G">
+      <Language ID="$language"/>
+    </Product>
+"@
+    }
+    if ($ProjectCheck.IsChecked) {
+        $projectXml = @"
+    <Product ID="ProjectPro2024Volume" PIDKEY="FQQ23-N4YCY-73HQ3-FM9WC-76HF4">
+      <Language ID="$language"/>
+    </Product>
+"@
+    }
+
+    # Génère le XML complet
+    $xml = @"
+<Configuration ID="a982351e-c99a-456e-82ec-8a6c38d4864f">
+  <Add OfficeClientEdition="64" Channel="Current">
+    <Product ID="O365ProPlusRetail">
+      <Language ID="$language"/>
+$excludeXml
+    </Product>
+$visioXml
+$projectXml
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0"/>
+  <Property Name="FORCEAPPSHUTDOWN" Value="FALSE"/>
+  <Property Name="DeviceBasedLicensing" Value="0"/>
+  <Property Name="SCLCacheOverride" Value="0"/>
+  <Property Name="AUTOACTIVATE" Value="1"/>
+  <Updates Enabled="TRUE"/>
+  <RemoveMSI/>
+</Configuration>
+"@
+
+    # Écrit le fichier temporaire
+    $xml | Out-File -Encoding UTF8 -FilePath $tempXml
+
+    # Vérifie si setup.exe est présent
+    if (!(Test-Path $setupPath)) {
+        try {
+            $url = "https://raw.githubusercontent.com/Raad2002/clone/main/setup.exe"
+            Invoke-WebRequest -Uri $url -OutFile $setupPath
+            Start-Sleep -Seconds 2
+            Unblock-File -Path $setupPath
+        } catch {
+            [System.Windows.Forms.MessageBox]::Show("Échec du téléchargement de setup.exe.")
+            return
+        }
+
+        if ((Get-Item $setupPath).Length -lt 500000) {
+            [System.Windows.Forms.MessageBox]::Show("Le fichier téléchargé semble invalide ou corrompu.")
+            return
+        }
+    }
+
+    # Lance l’installation
+    Start-Process -FilePath $setupPath -WorkingDirectory (Split-Path $setupPath) -ArgumentList "/configure `"$tempXml`"" -Verb RunAs
+})
+
+
+
+$UninstallOfficeButton = $Window.FindName("UninstallOfficeButton")
+$UninstallOfficeButton.Add_Click({
+    $setupPath = "$env:TEMP\setup.exe"
+    $tempXml = [System.IO.Path]::Combine($env:TEMP, "UninstallConfig.xml")
+    $selectedLang = $LanguageSelector.SelectedItem.Tag
+
+    # Vérifie si setup.exe est présent, sinon le télécharge depuis GitHub
+    if (!(Test-Path $setupPath)) {
+        try {
+            $url = "https://raw.githubusercontent.com/Raad2002/clone/main/setup.exe"
+            Invoke-WebRequest -Uri $url -OutFile $setupPath
+            Start-Sleep -Seconds 2
+            Unblock-File -Path $setupPath
+        } catch {
+            [System.Windows.Forms.MessageBox]::Show("Échec du téléchargement de setup.exe.")
+            return
+        }
+
+        if ((Get-Item $setupPath).Length -lt 500000) {
+            [System.Windows.Forms.MessageBox]::Show("Le fichier téléchargé semble invalide ou corrompu.")
+            return
+        }
+    }
+
+    # Dictionnaire des Product IDs
+    $productMap = @{
+        Access = "AccessRetail"
+        Excel = "O365ProPlusRetail"
+        Groove = "O365ProPlusRetail"
+        Skype = "LyncRetail"
+        OneDrive = "O365ProPlusRetail"
+        OneNote = "O365ProPlusRetail"
+        OutlookClassic = "O365ProPlusRetail"
+        OutlookNew = "O365ProPlusRetail"
+        PowerPoint = "O365ProPlusRetail"
+        Publisher = "O365ProPlusRetail"
+        Teams = "TeamsRetail"
+        Word = "O365ProPlusRetail"
+        Visio = "VisioPro2024Volume"
+        Project = "ProjectPro2024Volume"
+    }
+
+    # Récupère les apps cochées
+    $appsToRemove = @()
+    if ($AccessCheck.IsChecked) { $appsToRemove += "Access" }
+    if ($ExcelCheck.IsChecked) { $appsToRemove += "Excel" }
+    if ($GrooveCheck.IsChecked) { $appsToRemove += "Groove" }
+    if ($SkypeCheck.IsChecked) { $appsToRemove += "Skype" }
+    if ($OneDriveCheck.IsChecked) { $appsToRemove += "OneDrive" }
+    if ($OneNoteCheck.IsChecked) { $appsToRemove += "OneNote" }
+    if ($OutlookClassicCheck.IsChecked) { $appsToRemove += "OutlookClassic" }
+    if ($OutlookNewCheck.IsChecked) { $appsToRemove += "OutlookNew" }
+    if ($PowerPointCheck.IsChecked) { $appsToRemove += "PowerPoint" }
+    if ($PublisherCheck.IsChecked) { $appsToRemove += "Publisher" }
+    if ($TeamsCheck.IsChecked) { $appsToRemove += "Teams" }
+    if ($WordCheck.IsChecked) { $appsToRemove += "Word" }
+    if ($VisioCheck.IsChecked) { $appsToRemove += "Visio" }
+    if ($ProjectCheck.IsChecked) { $appsToRemove += "Project" }
+
+    if ($appsToRemove.Count -eq 0) {
+        [System.Windows.Forms.MessageBox]::Show("Aucune application sélectionnée pour la désinstallation.")
+        return
+    }
+
+    # Génère les blocs <Product>
+    $removeXml = $appsToRemove | ForEach-Object {
+        $id = $productMap[$_]
+        @"
+    <Product ID="$id">
+      <Language ID="$selectedLang"/>
+    </Product>
+"@
+    }
+
+    # Assemble le XML complet
+    $xmlContent = @"
+<Configuration>
+  <Remove>
+$removeXml
+  </Remove>
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>
+"@
+
+    # Écrit le fichier temporaire
+    $xmlContent | Out-File -Encoding UTF8 $tempXml
+    
+
+    # Lance setup.exe avec le fichier temporaire
+    Start-Process -FilePath $setupPath -WorkingDirectory (Split-Path $setupPath) -ArgumentList "/configure `"$tempXml`"" -Verb RunAs
+    [System.Windows.Forms.MessageBox]::Show("désinstallation en cour.")
+})
+
 
 
 $xamlForm.ShowDialog() | out-null
